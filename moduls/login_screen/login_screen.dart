@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login/sing_up.dart';
+import '../../shared/componentes/componentes.dart';
+import '../sing_up/sing_up.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -66,27 +68,17 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 25.0,
                 ),
-                Container(
-                  width: double.infinity,
-                  color: Colors.blue,
-                  height: 50,
-                  child: MaterialButton(
-                    onPressed: () {
-                      print(emailController.text);
-                      print(passwordController.text);
-                    },
-                    child: const Text(
-                      'LOGIN',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ),
                 const SizedBox(
                   height: 4,
                 ),
+                deafultButton(
+                    text: 'Login',
+                    width: double.infinity,
+                    function: () {
+                      print(emailController.text);
+                      print(passwordController.text);
+                    },
+                    background: Colors.blue),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -100,7 +92,10 @@ class HomeScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context)=>const SingUp(),),);
+                          MaterialPageRoute(
+                            builder: (context) => const SingUp(),
+                          ),
+                        );
                       },
                       child: const Text(
                         'Sing Up',
