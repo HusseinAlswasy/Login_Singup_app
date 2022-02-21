@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class SingUp extends StatelessWidget {
   const SingUp({Key? key}) : super(key: key);
