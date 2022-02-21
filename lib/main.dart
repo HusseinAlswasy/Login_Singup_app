@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../moduls/login_screen/login_screen.dart';
-import '../moduls/sing_up/sing_up.dart';
+import 'package:login/modules/login/login_screen.dart';
+
 void main() {
   return runApp(const MyApp());
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../shared/componentes/componentes.dart';
-import '../sing_up/sing_up.dart';
 
+import '../../shared/componentes/componentes.dart';
+import '../sing/sing_up.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -73,12 +73,23 @@ class HomeScreen extends StatelessWidget {
                 ),
                 deafultButton(
                     text: 'Login',
-                    width: double.infinity,
                     function: () {
                       print(emailController.text);
                       print(passwordController.text);
                     },
-                    background: Colors.blue),
+                ),
+
+                const SizedBox(
+                  height: 4,
+                ),
+
+                deafultButton(
+                  text: 'Login',
+                  function: () {
+                    print(emailController.text);
+                    print(passwordController.text);
+                  },
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
